@@ -1,4 +1,4 @@
-#Turma: 88344
+#Turma: 88433
 #Componentes da equipe: Erick Menezes, João Miranda, Uillian Anderson, Marcos André.
 
 import tkinter as tk
@@ -66,6 +66,10 @@ def pesquisar():
         tk.Label(search_window, text=resultado["Nome"], anchor="w").grid(row=i, column=0, padx=5, pady=2)
         tk.Label(search_window, text=resultado["CPF"], anchor="w").grid(row=i, column=1, padx=5, pady=2)
         tk.Label(search_window, text=resultado["Cargo"], anchor="w").grid(row=i, column=2, padx=5, pady=2)
+
+    # Botão para fechar a janela de pesquisa
+    btn_fechar = tk.Button(search_window, text="Fechar", width=10, command=search_window.destroy)
+    btn_fechar.grid(row=i + 1, column=0, columnspan=3, pady=10)
 
 # Função de Alterar
 def abrir_tela_alterar():
